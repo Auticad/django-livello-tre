@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+    <div class="col-7">
+        <h1>Pagina di Contatto</h1>
+        <p>
+            Sed lacinia nibh eget pulvinar viverra. Morbi bibendum pulvinar mi, sed molestie lacus rutrum vitae. Vestibulum sit amet libero ut dolor mollis vestibulum facilisis non sem. Fusce rutrum felis vel risus sagittis, in pharetra ligula dapibus. Sed faucibus mauris ut augue commodo sagittis. Vestibulum nec auctor mi, faucibus porta diam. Vivamus non leo et ligula hendrerit rhoncus elementum sit amet elit. Nam urna urna, scelerisque rhoncus ornare eu, commodo in odio.
+        </p>
+        <p>
+            Sed nisl orci, dignissim ut sodales sed, interdum vitae turpis. Suspendisse potenti. Vestibulum eu gravida sapien. In dignissim posuere elit, quis iaculis leo tincidunt at. Aenean vitae ex tortor. Suspendisse vitae turpis eros.
+        </p>
+    </div>
+    <div class="col-5">
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <form method="POST" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-success" type="submit" value="INVIA MESSAGGIO">
+        </form>
+    </div>
+</div>
+{% endblock %}
